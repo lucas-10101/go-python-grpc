@@ -1,0 +1,4 @@
+client/__py_cache__/**
+*.pyc
+*.pyo
+client/grpc-python/**

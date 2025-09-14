@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pratice;
+
+option go_package = "pratice/proto;proto";
+
+message UUIDRequest {
+  int32 version = 1;
+  string namespace = 2;
+  string valueToHash = 3;
+}
+
+message UUIDResponse {
+  string uuid = 1;
+}
+
+service UUIDService {
+  // simple unary service method
+  rpc GetUUID (UUIDRequest) returns (UUIDResponse);
+}
